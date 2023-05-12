@@ -1,0 +1,42 @@
+This is an essential performance if we want to our program interplays with files, hence we might be able to
+create a file, read a file or modify a file-depending of the file permissions-
+
+1. See directories
+    const fs = require('fs')
+    fs.readdir(<directory>, <callback>) where in directory is the files and directories 
+    that we want to see
+
+2. Read a file (plain text):
+    const fs = require('fs')
+    fs.readFile(<file>, <callback>) we got the file to read. The callback manipulates 
+    all performances that we need to do at the time to make a file reading.
+
+3. Corroborate if a file exists:
+    const fs = require('fs')
+    fs.access(<file>[, <mode>], <callback>) we set the path which we think the file is in with the file name.
+    Mode is an optional integer value to corroborate information about the file passed by<path> argument, 
+    default value in <mode> is fs.constants.F_OK, indicating that the file is visible to the calling process, 
+    between this one are other constants: R_OK, W_OK, X_OK. The callback manipulates all performances that 
+    we need to do at the time to validate a file.
+
+4. Create a file & write in it:
+    const fs = require('fs'),
+    file = 'myFile.txt',
+    text = 'This is a text.'
+
+    fs.writeFile(<file>, <data>[, <options>], <callback>) we set the path which we think the file is in with the 
+    file name. In <data> we set data to insert in the document. In <options> we can set data encoding -databuffer-, 
+    mode -option only affects the newly created file, its default value is '0o666', hence file will be readable and 
+    writable, a flag which default is 'w' and a signal.
+
+    i.e. fs.writeFile(file, text, carryCreationOut)
+    * If the file doesn't exist, this instruction will create it.
+
+5. Attach content to a file:
+    If we already have a file, fs.writeFile is utility; we can do it with the appendeFile method.
+    const fs = require('fs'),
+    file = 'myFile.txt',
+    text = 'This is another text.'
+
+    fs.appendFile(<file>, <data>[, <options>], <callback>) this one works at the same way than writeFile,
+    but we must set a file that have existence. Option's flag default value is 'a'.

@@ -1,0 +1,11 @@
+- In our server we're gonna validate the URLs, if req.url is equal to home ('/') then, we read the index.html and,
+we write with the end() method the data inside of the document.
+- After that we're gonna validate possible type of files required in our document and, create a readable passing by
+arguments an absolute path with the req.url defined at the end, some like this: 
+==================>let readable = fs.createReadStream(path.join('../public', 'assets', req.url))<==================
+- We must use the response to write the head in our server again, but this time with the content type of the file
+validated before, example: res.writeHead(200, {'Content-Type' : 'text/css'})
+THERE ARE MORE INFORMATION ABOUT 'CONTENT-TYPE' HERE => https://www.geeksforgeeks.org/http-headers-content-type/
+- At the end of the validation, we use the readable to append information to the response with the pipe() method,
+this one has the end() method as true by default, that's why we don't use res.end(), instead of that we use:
+===============================>readable.pipe(res)<===============================

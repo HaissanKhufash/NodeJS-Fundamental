@@ -1,0 +1,20 @@
+We carry a request on HTTP out with the ClientRequest object -created at the time of using the line:
+http.request(<options>), this one receives an object with 'options' which must have a hostname, port, path,
+and method.
+
+i.e.
+const http = require('http'),
+options = {host: 'localhost', port: '5500', path: '/league'},
+req = http.request(options)
+
+We get information about the response when we specify determined instructions in the 'response' event belonging to
+the request.
+i.e.
+req.on('response', res => {
+    res.on('data', chunk => {
+        console.log(chunk.toString())
+    })
+})
+In the above example, we print on the console the data received from the response
+
+After use any request, we must close it with req.end([<data>[, <encoding>]][, <callback>])

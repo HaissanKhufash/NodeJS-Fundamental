@@ -1,0 +1,8 @@
+1. Install:
+    npm -g install httpster
+
+2. Use:
+    httpster -p 8080 -d /home/somedir/public_html
+
+This module is util when you want to test your sites, without need to corroborate every single file in the
+directory -which brings some drawbacks.

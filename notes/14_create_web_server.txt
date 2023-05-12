@@ -1,0 +1,16 @@
+We might have a server with a little of code lines:
+1. Create a function to manipulate the response and the request of our server:
+    i.e.
+    webServer = (req, res) => {
+        let readable = fs.createReadStream('../json/league.json'),
+        data = ''
+
+        res.writeHead(200, {'Content-Type' : 'text/plain'})
+        readable.on('data', chunk => {
+            data += chunk
+        })
+        readable.on('end', () => res.end(data))
+    }
+    In the above example we read a json file and put its content on the page that our server displays.
+    In these instructions there are two(2) essential steps, res.writeHead(<statusCode>[, <statusMessage>]
+    [, <headers>]) and res.end([<data>[, <encoding>]][, <callback>])

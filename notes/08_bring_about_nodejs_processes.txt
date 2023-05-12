@@ -1,0 +1,20 @@
+This performs on process, it spawns a lot of processes which can be chosen by us depending of what do
+we need; we bring about them -processes- with the module child_process which contain a huge of performances.
+
+1. Execute a process:
+    i.e.
+    const exec = require('child_process').exec,
+    carryProcessOut = (err, stdout) => {
+        if(err) throw err
+
+        console.log(stdout)
+    }
+
+    exec(<command>[,<options>][,<callback>]) where command may be a expression that might be executed
+    on console.
+    Options may be the current working directory of the child process (cwd), environment key-value pairs 
+    (process.env by default), shell to execute the command with (by default in linux: '/bin/sh'; by default
+    in windows: process.env.ComSpec), abort the child process -using an AbortSignal-, etc...
+    Callback manipulates data arising out of the process.
+
+    i.e. exec(`./bat_code/operation.bat ${param1} ${param2} ${paramN}`, carryProcessOut)

@@ -1,0 +1,31 @@
+Events gives us permission to handle custom actions, though most of modules integrate some events
+to control with callbacks their data.
+Usually, we're gonna want to manipulate events of us, if we wanna do it we must create a instance
+of the EventEmitter class, with this one we might assign our events and emit them when need to do it.
+1. Create our events:
+    const EE = new require('events').EventEmitter
+    EE.on(<customEvent>-String-, <callback>), where customEvent is the name of your possible event,
+    and callback is the event handler that performs of the way that we specify to this one.
+
+2. Emit our events:
+    EE.emit(<customEvent>[,<callback arguments...>]) this expression emits the event passed on
+    customEvent and gives to the callback the needed arguments (data passed on callback arguments).
+
+3. Apply event inheritance in our object:
+    It's monotonous to create a huge of events when you don't know how many of them do you need,
+    thence, you can inherit the EventEmitter on your objects and create your own events in the
+    object scope spontaneously and emit them when you need them.
+    i.e.
+    const EE = new require('events').EventEmitter
+
+    class Person extends EE{
+        constructor([<arg1>, ...<argN>]){
+            super()
+            this.arg1 = arg1
+            this.argN = argN
+        }
+    }
+
+    const person = new Person.constructor('arg1', 'argN')
+    person.on(<customEvent>, <callback>)
+    if(typeof person === 'object') person.emit(<customEvent>[,<callback arguments...>])

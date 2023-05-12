@@ -1,0 +1,16 @@
+In ./routes/index.js we're gonna manage all server routes, so, we should handle errors in case of a no 
+specified path.
+For that, we're gonna create a function which will create an error and display it in HTML format (rendered by pug).
+We're gonna use it with the router at the end of the routes handling, thus when we get a no specified path
+the server throws the error.
+i.e.
+router
+    .get( '/', (req, res) => {
+        res.setHeader('Content-Type', 'text/html')
+        const locals = {title: 'My server', contentTitle: 'Hi, this a rendered page by pug and express'}
+        res.render( 'index', locals )
+    } )
+    
+    .get('/user-stats/:id-:name', userStats)
+
+    ===> .use(error404) <=== After routes management

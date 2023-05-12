@@ -1,0 +1,13 @@
+- Get the current path (where we're compiling the file):
+    __dirname -String- ===> global variable JS available when we're compiling a file with node.
+
+- Get the current path & the filename (where we're compiling the file including this one):
+    __filename -String- ===> global variable JS available when we're compiling a file with node.
+
+- Require a module.
+    i.e. let module = require('module')
+
+- Get the basename of the current file:
+    example:
+    let path = require('path'),
+    thisFilename = path.basename(__filename)

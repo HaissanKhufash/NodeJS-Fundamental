@@ -1,0 +1,10 @@
+1. Install nvm:
+    We can download the installable from the official page of nvm;
+    Execute the installable to be able to do the following steps to install node.
+
+2. Install node:
+    type: 'nvm install latest' to install the last version or;
+    type: 'nvm install <version>' to install a preferred version, i.e. nvm install 18.0.0
+
+3. Choose a node version to use:
+    type: 'nvm use <version>'

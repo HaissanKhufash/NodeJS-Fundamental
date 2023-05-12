@@ -1,0 +1,19 @@
+* If we want to use pug with ExpressJS, we must create a folder in our project named as "views", and there add
+a pug file.
+1. We must install the pug module ===> npm --save-dev install pug. The most of the time we use pug as a development
+dependecy.
+2. Our app.js or server handling file should be at the same level than "views" folder.
+3. In the app.js file we must set pug as the view engine to use ===> app.set('view engine', 'pug').
+4. Render the template engine file on a route:
+    i.e.
+    app.get('/', (req, res) => {
+        res.render(<pug file name>-String-, <options>-Object)
+    })
+    In <options> we can set some values to use in the pug file such as information from our application.
+
+                                            PUG FEATURES
+html
+    head
+        title #{titleOption}
+    body
+        p #{someDataOption}

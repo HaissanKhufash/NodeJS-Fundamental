@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "start": "nodemon server"
+  },
+  "name": "configuring_express",
+  "version": "0.0.1",
+  "description": "Configuring my express application in various files, and ordering by functionalities",
+  "main": "server",
+  "keywords": [
+    "express",
+    "pug",
+    "order",
+    "router"
+  ],
+  "author": "Haissan Khufash",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
+  }
+}

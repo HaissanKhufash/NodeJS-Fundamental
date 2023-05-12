@@ -1,0 +1,8 @@
+1. Install:
+    npm -g install nodemon
+
+2. Use:
+  nodemon <file>
+
+This module is a utility when you wish to restart your server without the need to kill the one. This module 
+restarts our server every time we save new features in.

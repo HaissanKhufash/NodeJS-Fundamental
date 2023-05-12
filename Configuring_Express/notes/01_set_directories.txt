@@ -1,0 +1,44 @@
+1. Structure directories and files.
+- public
+|    | assets
+|            | images
+|            | javascript
+|            | sheetstyles
+|                > style.css
+--------------------------------
+- routes
+|    > index.js
+--------------------------------
+- views
+|   > index.pug
+--------------------------------
+> app.js
+> server.js
+--------------------------------
+
+* Directory where we're gonna search resources in views is from public.
+
+2. npm init.
+Initialize your project and manage your package.json
+
+3. Config app.js.
+    Here you're gonna define your app:
+    1. Call express module and create your app with express().
+    2. Call all needed middlewares, including index.js ( require('./routes/index') ) where we're gonna manage 
+    all routes.
+    3. Define paths/urls that you might use related to middlewares.
+    4. Define a port in the following way: (process.env.PORT || 3000), then if the port 3000 is being used,
+    the process will asign another one.
+    5. Set variables in the app:
+        - Here we set 'view', 'view engine', 'port', and so on...
+    6. Use middlewares.
+    7. Export app.
+
+4. Config __dirname/routes/index.js.
+    1. Call express module and create your router with express.Router() static method.
+    2. Manage your routes.
+    3. Export router
+
+5. Config server.js.
+    1. Call app.js ( require('./app') ).
+    2. 'Listen' to the port that we set in the app previously ( app.listen( app.get('port') ) )

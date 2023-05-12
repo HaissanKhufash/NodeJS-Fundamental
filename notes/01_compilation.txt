@@ -1,0 +1,7 @@
+1. Create a js file:
+    Supposing we've a file named 'file.js', if we want that the file may be compiled,
+    we must execute in the root where the file is stored a node command on CLI (Command Line Interface).
+
+2. node command:
+        Execute the following command in your scope of storing (where you have stored your file)
+        i.e. /c://Users/Desktop/Node_course> node file.js

@@ -1,0 +1,27 @@
+Get this concept is essential, because depending of our neededs a module might exist to aid us,
+that's why we must familiarize with these ones and learn about them in a depth way.
+
+1. Export yours:
+    Supposing that we've a file named as 'file.js', we're gonna export a slice of our code,
+    this might be a literal, a function or an object...
+    i.e. 
+    2. IMPORT from node core of this way ===> const util = require('util'),
+    MY_OBJECT = {
+        name: 'Name',
+        surname: 'Surname',
+        info: function(){
+            console.log(util.format('Hi %s, %s. Nice to meet you', this.surname, this.name))
+        }
+    }
+
+    module.exports = MY_OBJECT
+
+3. Import yours:
+    Keeping on with the above example, we're gonna call the file in another one named as 'importing.js'
+    to use the object exported by us previously.
+    i.e.
+    const greeting = require('file')
+    file.info()
+
+    /c://Users/Desktop/Node_course> node importing.js
+    Result: Hi Surname, Name. Nice to meet you

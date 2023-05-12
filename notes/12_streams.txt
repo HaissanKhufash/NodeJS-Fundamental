@@ -1,0 +1,27 @@
+Manipulate data as streams is fundamental because it aids with no saturation when data is received or,
+introduced.
+
+1. Read streams:
+    i.e.
+    const fs = require('fs'),
+    carryReadingOut = chunk => {
+    data += chunk
+    },
+    readable = fs.createReadStream(<file>)
+
+    readable.on('data', carryReadingOut)
+
+    readable.on('end', () => {
+        readable.close()
+        console.log(data.length)
+    })
+    Instructions above create a readable object which contains information related to the file passed by
+    createReadStream. While data is being detected in the file, read data is gonna save itself by chunk
+    in a variable. When there's no more data, then reading is closed.
+
+2. Write streams:
+    Steps
+    const fs = require('fs') ===> require file system core's module
+    writable = fs.createWriteStream(<file>) ===> create a file as an stream
+    writable.write(<content>[, <encoding>]) ===> write information in your writeable stream
+    writable.end() ===> close the flow of data when you're sure of you're finished

@@ -1,0 +1,92 @@
+h3{
+    font-size: 1.05rem;
+    text-align: center;
+    color: var(--bg-main-color);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--letter-main-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-main-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-secundary-el);
+}
+
+
+.slide{
+    width: 100%;
+    height: inherit;
+    margin-bottom: 5rem;
+}
+
+.slide-container{
+    width: 80%;
+    height: inherit;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    color: var(--letter-main-color);
+}
+
+.carousel{
+    width: 50%;
+    height: 50vh;
+    overflow-x: hidden;
+    display: flex;
+    
+}
+
+.carousel-container{
+    display: grid;
+    grid-template-columns: repeat(5, 100%);
+    justify-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+}
+
+.carousel-container::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.carousel-container img{
+    border: medium solid var(--bg-secundary-el); 
+    max-width: 100%;
+    height: 20ex;
+    margin: 0 auto;
+    border-radius: 3rem / 3rem;
+    object-fit: cover;  
+}
+
+.carousel-container figcaption{
+    font-size: 1rem;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.carousel-slide{
+    width: 100%;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-secundary-el);
+}
+
+.carousel-slide:nth-child(odd){
+    background-color: var(--shadow);
+}

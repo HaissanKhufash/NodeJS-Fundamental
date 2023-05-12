@@ -1,0 +1,12 @@
+Use directories is a continual practice that we do in our Operating System, manipulate them may be an 
+exceptional way to control our actions with them.
+
+1. Create a directory:
+    fs.mkdir(<path>[, <options>], <callback>) where path is the directory to create. Options may have
+    recursive which default value is 'false', if this one is true, the first directory path created,
+    can still be undefined when recursive is true, if no directory was created. And Mode, which
+    default value is '0o777'.
+    
+    i.e.
+    const fs = require('fs')
+    fs.mkdir('my_new_directory', carryCreatingOut)  

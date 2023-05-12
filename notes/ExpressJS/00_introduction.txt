@@ -1,0 +1,11 @@
+1. Install express module:
+    > npm install express
+
+2. Use express() method to start handling the application:
+    const express = require('express'),
+    app = express()
+
+3. Use app.use() method to handle an static page defined through express.static(<page>):
+    i.e.
+    app.use(express.static('../../public'))
+    app.listen(3000)

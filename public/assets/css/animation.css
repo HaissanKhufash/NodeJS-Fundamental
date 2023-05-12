@@ -1,0 +1,46 @@
+h3{
+    font-size: 1.05rem;
+    text-align: center;
+    color: var(--letter-main-color);
+}
+
+.translating-to-x{
+    transition: transform 2s ease-in;
+}
+
+.translating-to-x:hover{
+    transform: translateX(5rem);
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.fade-in{
+    animation: fadeIn 2s linear infinite alternate;
+}
+
+@keyframes spinner {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+.load-spn{
+    width: 2.5vw;
+    height: 2.5vw;
+    margin: 0 auto;
+    border: medium solid rgba(0, 0, 0, 1);
+    border-radius: 50%;
+    border-top-color: #22d;
+    animation: spinner 2s cubic-bezier(0.075, 0.82, 0.165, 1) infinite both;
+}

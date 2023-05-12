@@ -1,0 +1,19 @@
+1. Install express in our project.
+2. Create a public folder in which we store all documents that make alive our page.
+3. In public's assets we create a JSON file and suppose that this one is a API REST.
+4. At the same level of public folder we create our app which manage our server:
+    - Main page:
+        1. Charge index.html as main page or root page ('/') 
+    - get ===> '/get-films':
+        1. Get JSON file and read it of a synchronous way.
+        2. Send its content in format 'application/json'.
+    - post ===> '/new':
+        1. Obtain require variables with req.body.
+        2. Save JSON file in a variable.
+        3. Parse JSON file to an object.
+        4. Push in 'films' array belonging to the JSON object created previously an object
+        with the obtained require variables.
+        5. Write in the JSON file the stringified object of a synchronous way.
+        6. Send whether messages.
+5. Use AJAX to get the content from the JSON file.
+6. Use AJAX to post the form on '/new' and reload automatically the page.        

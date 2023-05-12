@@ -1,0 +1,22 @@
+[
+  {
+    "name": "conmebol",
+    "champion": "argentina",
+    "id": 1
+  },
+  {
+    "name": "uefa",
+    "champion": "italia",
+    "id": 2
+  },
+  {
+    "name": "concacaf",
+    "champion": "united states",
+    "id": 3
+  },
+  {
+    "name": "acf",
+    "champion": "marrocco",
+    "id": 4
+  }
+]

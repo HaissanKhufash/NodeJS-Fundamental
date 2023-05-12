@@ -1,0 +1,15 @@
+Node is executed through a process of an asynchronous way, that's why we can manipulate arguments
+of the process when we just compile the file.
+
+- Get all arguments of the process:
+    process.argv -array- ===> this property returns all arguments of the process, if we don't assign more
+    arguments, the stored values are [<node source>, <file path>]
+    <node source> ===> path where node is installed.
+    <file path> ===> path where we're compiling the file.
+
+
+- Assign arguments to the process:
+    i.e. /c://Users/Desktop/Node_course> node file.js --<arg1> <value1> --<arg2> <value2>... --<argN> <valueN>
+    * Arguments in JS must be written as they were specified at time of compiling the file.
+
+                                PROCESS IS A GLOBAL VARIABLE...

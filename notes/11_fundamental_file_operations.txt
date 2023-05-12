@@ -1,0 +1,17 @@
+Fundamental file operations refer to creating, renaming, moving, and deleting a file -we already see how
+to create a file.
+
+1. Renaming:
+    const fs = require('fs')
+    fs.rename(<oldPath>, <newPath>, <callback>)
+    i.e. fs.rename('file.txt', 'test_file.txt', carryRenamingOut)
+
+2. Moving:
+    const fs = require('fs')
+    fs.rename(<oldPath>, <newPath>, <callback>)
+    i.e. fs.rename('./oldPath/file.txt', './new/Path/test_file.txt', carryMovingOut)
+
+3. Deleting:
+    const fs = require('fs')
+    fs.rename(<path>, <callback>)
+    i.e. fs.rename('./new/Path/test_file.txt', carryDeletingOut)

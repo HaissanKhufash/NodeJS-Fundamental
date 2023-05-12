@@ -1,0 +1,19 @@
+This module is made to manage information like obtained parameters from an url -it's not the only utility, 
+this one has some interesting properties when we define it as a middleware in the application.
+i.e.
+const express = require('express'),
+app = express(),
+urlencoded = require('body-parser').urlencoded({extended: false}), ===> specify that we wanna use  URL's information
+PORT = 3000
+
+app.use(urlencoded) ===> define as middleware
+
+app.get('/', (req, res) => {
+    const name = req.query.name, ==== ALLOW US TO WORK WITH
+    surname = req.query.surname  ==== QUERIES FROM AN URL AND, SO...
+
+    res.send(`<p>Name: ${name}</p>
+              <p>Surname: ${surname}</p>`)
+})
+
+app.listen(PORT, () => console.log(`Server has been initialized... port: ${PORT}`))

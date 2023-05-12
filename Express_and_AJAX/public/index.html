@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Your film on one hand</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="step-4">EXPRESS AND AJAX</h1>
+        <nav class="menu-container">
+            <ul class="menu">
+                <li class="il-sections"><a href="#form" class="a-in-menu">Introduce a film</a></li>
+                <li class="il-sections"><a href="#films" class="a-in-menu">The logged films</a></ll>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="form">
+            <h2 class="step-3">INTRODUCE A FILM</h2>
+            <form action="/new" method="post" class="form">
+                <label for="film_name" class="step-0">Film name</label>
+                <input type="text" name="film_name" placeholder="Film name" required>
+                <label for="rate" class="step-0">Rate it</label>
+                <input type="range" min="0" max="5" name="rate">
+                <input type="submit" value="Send">
+            </form>
+        </section>
+        <section id="films">
+            <h2 class="step-3">THE LOGGED FILMS</h2>
+            <table class="table-items">
+                <thead class="table-header">
+                    <tr>
+                        <th>Name</th>
+                        <th>Rate</th>
+                    </tr>
+                </thead>
+                <tbody class="table-body"></tbody>    
+            </table>
+        </section>
+        <template id="logged-films">
+            <tr>
+                <td class="film-name"></td>
+                <td class="film-rate"></td>
+            </tr>
+        </template>
+    </main>
+    <script src="./assets/javascript/index.js" type="module"></script>
+</body>
+</html>

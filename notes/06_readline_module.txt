@@ -1,0 +1,25 @@
+This module is so useful at the time to manipulate information from CLI, because of this one provides to us 
+a huge of tools to make tasks related to exchanging of datum lines through console.
+
+1. Create an interface:
+    We get a required module ===> const readline = require('readline'), then
+    we create the interface ===> const rl = readline.createInterface(<options>-object-) -readlinePromises.Interface-
+    common options may be an input and an output, where it may be like {
+        input: process.stdin,
+        output: process.stdout
+    }
+
+2. Set question and at the same time answer it:
+    rl.question(<question>-String-, <callback>), where callback offers only one response to the question
+    i.e. rl.question(`What's your name? `, setName)
+
+3. Loop of question:
+    We make it with an event named 'line', this one every moment that a line is written in console allows us
+    perform with any actions ===> rl.on('line', <callback>), where callback offers the performance.
+    i.e. rl.on('line', addFeedbacks)
+
+4. Prompt:
+    This one may be used when we require of that, beginning with the assignment of a Prompt
+    like this ===> rl.setPrompt(<message>-String-)
+    And after that, when we require of that prompt we might call it of the following way
+    ===> rl.prompt() and we're gonna have the possible message in console.

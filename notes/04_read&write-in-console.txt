@@ -1,0 +1,30 @@
+To write and read in console, we must use two properties of process variable.
+
+1. Write:
+    process.stdout.write(<value>) ===> this one display on console the value passed as argument without
+    any wrap, therefore if we want to display the value from one line and, keep the next line to another
+    command, we use '\n' to make a wrap.
+    i.e. process.stdout.write('Hi from node to console \n')
+    /c://Users/Desktop/Node_course> node file.js
+    Result: Hi from node to console
+            /c://Users/Desktop/Node_course>    
+    Instead of: Hi from node to console/c://Users/Desktop/Node_course>
+
+2. Read:
+    process.stdin.on(<event>, <callback>) ===> this one is opened to receive data from the console, then
+    it'll always be open, at least we close the process, data which this expression processes depends of
+    the event; commonly if we want read data written for the user, we use 'data' event and handle all
+    processes with the callback.
+    i.e. process.stdin.on('data', (data) => {
+        process.stdout.write(data.toString().trim())
+    })
+
+*. Close process when we don't need any data:
+    process.exit() ===> this method kills the current process, supposing that we use this one when we reach
+    the needed data, close the process and keep on the flow.
+    i.e. process.stdin.on('data', (data) => {
+        myData = data.toString().trim()
+        process.stdout.write(myData)
+        process.exit()
+    })
+    
